@@ -1,20 +1,20 @@
-import { sums, Subtracts } from './calculator.ts'
+import { Sums, Subtracts } from './calculator.ts'
 
 test('Calculates sums and subtractions with classes.', () => {
     //instanciei
-    const sums = new sums(2, 2);
-    const subtracts = new subtracts(4, 2);
+    const sumInstance = new Sums(2, 2);
+    const subtractsInstance = new Subtracts(4, 2);
     
-    expect(sums.calculates()).toEqual(4);
-    expect(subtracts.calculates()).toEqual(2);
+    expect(sumInstance.calculates()).toEqual(4);
+    expect(subtractsInstance.calculates()).toEqual(2);
 
-    sums.valueN1 = 5;
-    sums.valueN2 = 5;
+    sumInstance.valueN1 = 5;
+    sumInstance.valueN2 = 5;
 
-    subtracts.firstNumber = 6;
-    subtracts.secondNumber = 6;
+    subtractsInstance.firstNumber = 6;
+    subtractsInstance.secondNumber = 6;
 
-    expect(sums.calculates()).toEqual(10);
-    expect(subtracts.calculates()).toEqual(0);
+    expect(sumInstance.calculates()).toEqual(10);
+    expect(subtractsInstance.calculates()).toEqual(0);
 
 });
